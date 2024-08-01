@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { BasicButton } from "../../components/BasicButtons";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { Text } from "../../constants/TextConstants";
+import { LogoutButton } from "../../components/Logout";
 
 interface IPerson {
   id: number;
@@ -47,6 +48,7 @@ export const ReadData: React.FC = () => {
         onClick={() => navigate("/create")}
         text={Text.Add}
       ></BasicButton>
+      <LogoutButton />
       <table>
         <thead>
           <tr>
