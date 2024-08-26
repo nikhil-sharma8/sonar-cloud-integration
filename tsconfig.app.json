@@ -25,5 +25,5 @@
     "types": ["vitest/globals", "jest"]
   },
   "include": ["src", "/src/test/setup.ts"],
-  "exclude": ["src/components/TextFields", "src/components/constants"]
+  "exclude": ["src/components/atoms/TextFields", "src/components/constants"]
 }

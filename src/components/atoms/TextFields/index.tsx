@@ -1,5 +1,5 @@
 import React from "react";
-import { TextField } from "@mui/material";
+import { TextField as MuiTextField } from "@mui/material";
 
 interface IBasicTextFieldProps {
   label: string;
@@ -7,13 +7,13 @@ interface IBasicTextFieldProps {
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const BasicTextField: React.FC<IBasicTextFieldProps> = ({
+const TextField: React.FC<IBasicTextFieldProps> = ({
   label,
   value,
   onChange,
 }) => {
   return (
-    <TextField
+    <MuiTextField
       label={label}
       value={value}
       onChange={onChange}
@@ -24,4 +24,4 @@ const BasicTextField: React.FC<IBasicTextFieldProps> = ({
   );
 };
 
-export default BasicTextField;
+export default TextField;

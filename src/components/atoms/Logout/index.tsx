@@ -1,15 +1,15 @@
 import { useAuth0 } from "@auth0/auth0-react";
-import { BasicButton } from "../BasicButtons";
+import { Button } from "../BasicButtons";
 
 export const LogoutButton = () => {
   const { logout } = useAuth0();
 
   return (
-    <BasicButton
+    <Button
       onClick={() =>
         logout({ logoutParams: { returnTo: window.location.origin } })
       }
       text={"Logout"}
-    ></BasicButton>
+    ></Button>
   );
 };

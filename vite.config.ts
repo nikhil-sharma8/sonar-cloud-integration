@@ -14,6 +14,7 @@ export default defineConfig({
     coverage: {
       reporter: ["text", "lcov"],
       include: ["src/components/**/*.{js,jsx,ts,tsx}"],
+      exclude: ["src/components/atoms/TextFields/*.{js,ts,jsx,tsx}"],
     },
   },
 });

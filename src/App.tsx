@@ -5,8 +5,8 @@ import { ReadData } from "./pages/ReadData";
 import NotFound from "./pages/NotFound";
 import DeleteData from "./pages/DeleteData";
 import UpdateData from "./pages/UpdateData";
-import PrivateRoute from "./components/PrivateRoute";
-import { LoginButton } from "./components/Login";
+import PrivateRoute from "./components/molecule/PrivateRoute";
+import { LoginButton } from "./components/atoms/Login";
 
 function App() {
   return (

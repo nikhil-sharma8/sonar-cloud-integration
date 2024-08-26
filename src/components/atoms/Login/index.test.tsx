@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { useAuth0 } from "@auth0/auth0-react";
-import { LoginButton } from "../Login/index";
+import { LoginButton } from "./index";
 
 vi.mock("@auth0/auth0-react");
 

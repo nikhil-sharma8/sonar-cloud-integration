@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import Endpoint from "../../utils/BaseInstance";
 import "./index.css";
 import { useNavigate } from "react-router-dom";
-import { BasicButton } from "../../components/BasicButtons";
+import { Button } from "../../components/atoms/BasicButtons";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { Text } from "../../constants/TextConstants";
-import { LogoutButton } from "../../components/Logout";
+import { Text } from "../../utils/constants/TextConstants";
+import { LogoutButton } from "../../components/atoms/Logout";
 
 interface IPerson {
   id: number;
@@ -43,11 +43,11 @@ export const ReadData: React.FC = () => {
   return (
     <div>
       <h1>Persons List</h1>
-      <BasicButton
+      <Button
         color="primary"
         onClick={() => navigate("/create")}
         text={Text.Add}
-      ></BasicButton>
+      ></Button>
       <LogoutButton />
       <table>
         <thead>
@@ -66,15 +66,15 @@ export const ReadData: React.FC = () => {
               <td>{person.email}</td>
               <td>{person.phone}</td>
               <td>
-                <BasicButton
+                <Button
                   onClick={() => navigate(`/update/${person.id}`)}
                   text={Text.Edit}
-                ></BasicButton>
-                <BasicButton
+                ></Button>
+                <Button
                   onClick={() => handleDelete(person.id)}
                   text={Text.Delete}
                   startIcon={<DeleteIcon />}
-                ></BasicButton>
+                ></Button>
               </td>
             </tr>
           ))}

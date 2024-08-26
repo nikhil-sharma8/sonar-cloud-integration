@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./index.css";
 import Endpoint from "../../utils/BaseInstance";
-import { BasicButton } from "../../components/BasicButtons";
-import { Text } from "../../constants/TextConstants";
-import BasicTextField from "../../components/TextFields";
-import { Label } from "../../constants/LabelConstants";
+import { Button } from "../../components/atoms/BasicButtons";
+import { Text } from "../../utils/constants/TextConstants";
+import TextField from "../../components/atoms/TextFields";
+import { Label } from "../../utils/constants/LabelConstants";
 
 export const CreateData: React.FC = () => {
   const [name, setName] = useState("");
@@ -41,22 +41,22 @@ export const CreateData: React.FC = () => {
     <div className="form-container">
       <h1>Create New Person</h1>
       <form onSubmit={handleSubmit}>
-        <BasicTextField
+        <TextField
           label={Label.Name}
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <BasicTextField
+        <TextField
           label={Label.Email}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <BasicTextField
+        <TextField
           label={Label.Phone}
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
         />
-        <BasicButton type="submit" text={Text.Submit}></BasicButton>
+        <Button type="submit" text={Text.Submit}></Button>
       </form>
     </div>
   );
